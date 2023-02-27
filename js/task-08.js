@@ -8,7 +8,16 @@ function handleSubmit(event) {
   const {
     elements: { email, password },
   } = event.currentTarget;
+
   if (email.value === "" || password.value === "") {
-    return alert("Заповніть всі поля");
+    return alert("Будь ласка заповніть всі поля");
   }
+  const formData = {
+    [email.name]: email.value,
+    [password.name]: password.value,
+  };
+
+  console.log(formData);
+
+  event.target.reset();
 }
