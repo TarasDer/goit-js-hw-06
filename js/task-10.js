@@ -30,6 +30,7 @@ inputEl.addEventListener("input", (event) => {
 
 handleCreateBtn.addEventListener("click", () => {
   createBoxes(amount);
+  console.log("Button is clicked");
   inputEl.value = "";
 });
 
