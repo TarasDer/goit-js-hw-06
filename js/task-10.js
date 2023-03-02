@@ -29,9 +29,11 @@ inputEl.addEventListener("input", (event) => {
 });
 
 handleCreateBtn.addEventListener("click", () => {
-  createBoxes(amount);
-  console.log("Button is clicked");
-  inputEl.value = "";
+  if (inputEl.value !== "") {
+    createBoxes(amount);
+  } else {
+    alert("Enter your number");
+  }
 });
 
 handleDestroyteBtn.addEventListener("click", () => {
